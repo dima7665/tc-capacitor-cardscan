@@ -1,0 +1,8 @@
+// Add
+<activity
+			android:configChanges="screenLayout|screenSize|orientation"
+			android:screenOrientation="portrait"
+			android:name=".ui.cardscan.CardScanActivity"
+			android:exported="true"
+			android:label="@string/title_activity_cardscan"
+			android:theme="@style/AppTheme" />
