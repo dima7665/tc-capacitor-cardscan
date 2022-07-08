@@ -13,7 +13,7 @@ class CardScanActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val cardScanSheet = CardScanSheet.create(this, "pk_test_67eI0H7RDNbK53y7V3nO8MmZ00cj3RL0Dw", ::onScanFinished)
+        val cardScanSheet = CardScanSheet.create(this, "pk_test_...", ::onScanFinished)
 
         cardScanSheet.present()
 
