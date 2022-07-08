@@ -17,7 +17,7 @@ class CardScanActivity: AppCompatActivity() {
     private lateinit var binding: CardScanBinding
     private lateinit var stripe: Stripe
 
-    private val stripePublKey = "pk_test_XbyEVednW4Sk7CwyFo5Dt8Py"
+    private val stripePublKey = "pk_test_..."
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
