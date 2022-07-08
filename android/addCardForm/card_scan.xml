@@ -1,0 +1,298 @@
+// Add card form
+
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#11FFFFFF">
+
+    <Button
+        android:id="@+id/buttonCardFormClose"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/stripe_close_button_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textFormTitle"
+        android:layout_width="243dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Add new card"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonCardFormClose"
+        app:layout_constraintStart_toEndOf="@+id/buttonCardFormClose"
+        app:layout_constraintTop_toTopOf="@+id/buttonCardFormClose" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="#221E1E"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCardFormClose" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:maxWidth="385dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scanActionLabel">
+
+        <LinearLayout
+            android:id="@+id/layoutCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/rounded_borders"
+            android:orientation="vertical"
+            android:paddingHorizontal="8dp">
+
+            <com.stripe.android.view.CardInputWidget
+                android:id="@+id/cardInputWidget"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.461" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/rounded_borders"
+            android:orientation="vertical"
+            android:paddingLeft="8dp"
+            android:paddingTop="2dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="2dp">
+
+            <TextView
+                android:id="@+id/labelForName"
+                android:layout_width="209dp"
+                android:layout_height="wrap_content"
+                android:text="Name on card*"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/nameField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="AUTOFILL_HINT_NAME"
+                android:background="@android:color/transparent"
+                android:hint="Please enter the name on card"
+                android:inputType="textPersonName"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutAddress"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/rounded_borders"
+            android:orientation="vertical"
+            android:paddingLeft="8dp"
+            android:paddingTop="2dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="2dp">
+
+            <TextView
+                android:id="@+id/labelForAddress"
+                android:layout_width="209dp"
+                android:layout_height="wrap_content"
+                android:text="Name on card*"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/addressField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="AUTOFILL_HINT_NAME"
+                android:background="@android:color/transparent"
+                android:hint="Please enter the street address"
+                android:inputType="textPersonName"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutCity"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/rounded_borders"
+            android:orientation="vertical"
+            android:paddingLeft="8dp"
+            android:paddingTop="2dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="2dp">
+
+            <TextView
+                android:id="@+id/labelForCity"
+                android:layout_width="209dp"
+                android:layout_height="wrap_content"
+                android:text="Name on card*"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/cityField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="AUTOFILL_HINT_NAME"
+                android:background="@android:color/transparent"
+                android:hint="Please enter city name"
+                android:inputType="textPersonName"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutState"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/rounded_borders"
+            android:orientation="vertical"
+            android:paddingLeft="8dp"
+            android:paddingTop="2dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="2dp">
+
+            <TextView
+                android:id="@+id/labelForState"
+                android:layout_width="209dp"
+                android:layout_height="wrap_content"
+                android:text="Name on card*"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/stateField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="AUTOFILL_HINT_NAME"
+                android:background="@android:color/transparent"
+                android:hint="Please enter the state/region"
+                android:inputType="textPersonName"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutZip"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_borders"
+            android:orientation="vertical"
+            android:paddingLeft="8dp"
+            android:paddingTop="2dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="2dp">
+
+            <TextView
+                android:id="@+id/labelForZip"
+                android:layout_width="209dp"
+                android:layout_height="wrap_content"
+                android:text="Name on card*"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/zipField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="AUTOFILL_HINT_NAME"
+                android:background="@android:color/transparent"
+                android:hint="Please enter zip"
+                android:inputType="textPersonName"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutSwitch"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="2dp">
+
+            <Switch
+                android:id="@+id/primarySwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+            <TextView
+                android:id="@+id/labelForSwitch"
+                android:layout_width="107dp"
+                android:layout_height="wrap_content"
+                android:text="Primary card"
+                android:textAlignment="center"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="#4CAF50"
+        android:backgroundTint="#FF9800"
+        android:text="Add new card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+    <Button
+        android:id="@+id/scanCardButton"
+        android:layout_width="35dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:drawable/ic_menu_camera"
+        android:backgroundTint="#4CAF50"
+        android:minHeight="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textFormTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textFormTitle" />
+
+    <Button
+        android:id="@+id/scanActionLabel"
+        android:layout_width="158dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="36dp"
+        android:background="@android:color/transparent"
+        android:text="Scan a card"
+        android:textAlignment="textEnd"
+        android:textColor="@color/primary"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
